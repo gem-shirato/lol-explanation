@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>チョ＝ガス 詳細攻略</title>
+    <title>チョ＝ガス 超詳細・完全攻略ガイド</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,94 +11,222 @@
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; background-color: #0D1B2A; color: #E0E1DD; }
         .glass-card { background: rgba(27, 38, 59, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(65, 90, 119, 0.5); }
+        .item-icon { width: 3rem; height: 3rem; border-radius: 0.375rem; border: 2px solid #415A77; }
+        .skill-icon { width: 4rem; height: 4rem; border-radius: 0.5rem; border: 2px solid #415A77; }
+        .champ-icon { width: 3rem; height: 3rem; border-radius: 50%; object-fit: cover; border: 2px solid #415A77; }
+        .rune-main { width: 5rem; height: 5rem; border-radius: 50%; }
+        .rune-sub { width: 3rem; height: 3rem; border-radius: 50%; }
     </style>
 </head>
 <body class="antialiased">
 
     <div class="container mx-auto p-4 md:p-8">
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-black text-white">チョ＝ガス 詳細攻略</h1>
+            <h1 class="text-4xl md:text-6xl font-black text-white">チョ＝ガス 完全攻略ガイド</h1>
+            <p class="text-xl text-[#778DA9]">無限に喰らい、無限に巨大化する虚空の恐怖</p>
             <a href="index.html" class="text-cyan-300 hover:text-cyan-100 transition-colors mt-4 inline-block">&larr; トップページに戻る</a>
         </header>
 
-        <main class="space-y-10">
+        <main class="space-y-12">
+            <!-- Introduction -->
             <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl font-bold text-white mb-4">役割と基本戦略</h2>
-                <p class="text-lg text-[#E0E1DD]">チョ＝ガスは、序盤のレーン戦を安全に乗り切り、中盤以降に「ハートスティール」とRのスタックでスケールすることを目指すレイトゲームタンクです。序盤は無理な戦闘を避け、ファームと経験値獲得を最優先しましょう。Wのサイレンスは、スキル主体のチャンピオンに対して非常に有効な武器となります。</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">チョ＝ガスとは？</h2>
+                <p class="text-lg text-[#E0E1DD] leading-relaxed">
+                    チョ＝ガスは、LoLにおける「レイトゲーム・ハイパーキャリー」という概念を最も純粋な形で体現するタンクチャンピオンです。彼の本質は「時間」。序盤の弱さを乗り越え、ファームとキルによってR<span class="font-bold text-cyan-300">「捕食」</span>のスタックを積み重ねることで、ゲーム後半には他の追随を許さない圧倒的な体力と火力を持つ怪物へと変貌します。彼の前では、アサシンはワンコンボを耐えられ、マークスマンは一撃で沈み、タワーすらも脆いクッキーのように砕け散ります。このガイドでは、そんな虚空の恐怖を完全にマスターするための全てを解説します。
+                </p>
             </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Skills -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">スキル解説：虚空の力</h2>
+                <div class="space-y-8">
+                    <!-- Q -->
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Rupture.png" class="skill-icon" alt="ラプチャーのスキルアイコン">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">Q - ラプチャー</h3>
+                            <p class="text-[#E0E1DD]">指定地点の地面を破裂させ、敵をノックアップさせてスロウ効果を与える、チョ＝ガスの主力CCスキル。射程が長く、ブッシュからの奇襲や、敵の進路妨害、味方のガンク合わせなど用途は多岐にわたる。ただし発生が遅いため、敵の移動先を予測して撃つ必要がある。</p>
+                        </div>
+                    </div>
+                    <!-- W -->
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/FeralScream.png" class="skill-icon" alt="野生の叫びのスキルアイコン">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">W - 野生の叫び</h3>
+                            <p class="text-[#E0E1DD]">扇状の範囲にいる敵にダメージとサイレンス（沈黙）効果を与える。リヴェンやフィオラといったスキルコンボが命のチャンピオンに対して絶大な効果を発揮する。サイレンスは敵のサモナースペル（フラッシュ等）も封じるため、ガンク合わせや確実なキルを狙う際に非常に強力。</p>
+                        </div>
+                    </div>
+                    <!-- E -->
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/VorpalSpikes.png" class="skill-icon" alt="ヴォーパルスパイクのスキルアイコン">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">E - ヴォーパルスパイク</h3>
+                            <p class="text-[#E0E1DD]">次の通常攻撃3回が強化され、棘を飛ばして範囲ダメージとスロウを与える。AAタイマーリセット効果があり、タワーの破壊やラストヒット精度向上に貢献する。スロウ効果はQを当てるための布石としても使える。</p>
+                        </div>
+                    </div>
+                    <!-- R -->
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Feast.png" class="skill-icon border-cyan-400" alt="捕食のスキルアイコン">
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white">R - 捕食</h3>
+                            <p class="text-[#E0E1DD]">対象の敵に大ダメージを与える確定ダメージスキル。このスキルで敵チャンピオンや中立モンスターをキルするとスタックを獲得し、最大体力と体のサイズが増加する。チョ＝ガスの無限スケールの源泉であり、ドラゴンやバロンといったオブジェクトのスティール（横取り）にも極めて有効。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Runes and Summoner Spells -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <section class="p-6 md:p-8 rounded-2xl glass-card">
-                    <h2 class="text-2xl font-bold text-white mb-4">スキルオーダー</h2>
-                    <p class="text-lg text-[#E0E1DD] mb-4">基本的にはQ上げでハラスとファーム補助を、W上げでサイレンスの時間を伸ばし戦闘を有利にします。</p>
-                    <div class="grid grid-cols-4 gap-2 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">ルーン選択：不滅の巨人</h2>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png" class="rune-main" alt="不死者の握撃">
                         <div>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Rupture.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="ラプチャーのスキルアイコン">
-                            <p class="text-lg font-bold mt-1">Q</p>
+                            <h3 class="text-xl font-bold">メインパス：不滅</h3>
+                            <p>レーンでの耐久力とスケール性能を最大化する。</p>
                         </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">不死者の握撃:</span> 戦闘中の体力吸収と最大体力増加がチョ＝ガスと完璧にシナジーする。</p>
+                        <p><span class="font-bold text-cyan-300">解体の槌:</span> タワープレートを獲得し、ゴールド差を広げる。</p>
+                        <p><span class="font-bold text-cyan-300">心身調整:</span> 12分後に得られる防御ボーナスが中盤の硬さを支える。</p>
+                        <p><span class="font-bold text-cyan-300">超成長:</span> ミニオンをファームするだけで最大体力が増加。スケールを加速させる。</p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7202_Sorcery.png" class="rune-sub" alt="魔道">
                         <div>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/FeralScream.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="野生の叫びのスキルアイコン">
-                            <p class="text-lg font-bold mt-1">W</p>
+                            <h3 class="text-xl font-bold">サブパス：魔道</h3>
+                            <p>スキルヘイストとマナ問題を解決。</p>
                         </div>
-                        <div>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/VorpalSpikes.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="ヴォーパルスパイクのスキルアイコン">
-                            <p class="text-lg font-bold mt-1">E</p>
-                        </div>
-                        <div>
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Feast.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-cyan-400" alt="捕食のスキルアイコン">
-                            <p class="text-lg font-bold mt-1">R</p>
-                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">ニンバスクローク:</span> サモナースペル使用後の移動速度増加で追撃や離脱を容易にする。</p>
+                        <p><span class="font-bold text-cyan-300">至高:</span> スキルヘイストを提供し、スキルの回転率を上げる。</p>
                     </div>
                 </section>
                 <section class="p-6 md:p-8 rounded-2xl glass-card">
-                    <h2 class="text-2xl font-bold text-white mb-4">コアビルドパス</h2>
-                    <p class="text-lg text-[#E0E1DD] mb-4">体力をスケールさせ、タンク性能を最大限に高めるビルドが基本です。</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3084.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="ハートスティールのアイテムアイコン"><span class="font-bold">ハートスティール:</span><span class="ml-2 text-sm">最優先。</span></li>
-                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3068.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="サンファイア・イージスのアイテムアイコン"><span class="font-bold">サンファイア・イージス:</span><span class="ml-2 text-sm">硬さと戦闘能力を向上。</span></li>
-                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/6667.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="カオニック・ルークウォールのアイテムアイコン"><span class="font-bold">カオニック・ルークウォール:</span><span class="ml-2 text-sm">対魔法ダメージの最適解。</span></li>
-                    </ul>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">サモナースペル</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/SummonerFlash.png" class="w-16 h-16 rounded-lg border-2 border-[#415A77]" alt="フラッシュ">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/SummonerTeleport.png" class="w-16 h-16 rounded-lg border-2 border-[#415A77]" alt="テレポート">
+                        </div>
+                        <p class="text-lg text-[#E0E1DD]"><span class="font-bold text-cyan-300">フラッシュ + テレポート</span>が最も安定した選択肢。フラッシュは攻守に必須。テレポートは序盤のレーン復帰や、中盤以降のマップコントロールに不可欠。</p>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 mt-8">スキルオーダー</h2>
+                    <div class="grid grid-cols-4 gap-2 text-center">
+                        <div><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">Q</p><p class="mt-1 text-sm">Lv 1, 4, 5, 7, 9</p></div>
+                        <div><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">W</p><p class="mt-1 text-sm">Lv 3, 8, 10, 12, 13</p></div>
+                        <div><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">E</p><p class="mt-1 text-sm">Lv 2, 14, 15, 17, 18</p></div>
+                        <div><p class="text-2xl font-bold bg-cyan-400 text-black rounded-md py-2">R</p><p class="mt-1 text-sm">Lv 6, 11, 16</p></div>
+                    </div>
                 </section>
             </div>
 
+            <!-- Itemization -->
             <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl font-bold text-white mb-4">マッチアップガイド</h2>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left align-middle">
-                        <thead class="text-sm text-[#E0E1DD]">
-                            <tr class="border-b border-[#415A77]">
-                                <th class="p-3 w-20"></th>
-                                <th class="p-3">チャンピオン</th>
-                                <th class="p-3">難易度</th>
-                                <th class="p-3">ワンポイント攻略</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-[#415A77]/50">
-                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" alt="フィオラのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
-                                <td class="p-3 font-bold text-red-400">フィオラ</td><td class="p-3 font-bold text-red-400">激高</td><td class="p-3">ピックしないのが最善。もし対面したらタワー下で耐える。</td>
-                            </tr>
-                            <tr class="border-b border-[#415A77]/50">
-                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" alt="ダリウスのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
-                                <td class="p-3 font-bold text-red-400">ダリウス</td><td class="p-3 font-bold text-red-400">高</td><td class="p-3">Eで捕まらない距離を保つ。序盤の戦闘は絶対に避ける。</td>
-                            </tr>
-                            <tr class="border-b border-[#415A77]/50">
-                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" alt="セトのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
-                                <td class="p-3 font-bold text-yellow-400">セト</td><td class="p-3 font-bold text-yellow-400">中</td><td class="p-3">相手のWの中心を避ける。Wのサイレンスで反撃のチャンスを伺う。</td>
-                            </tr>
-                            <tr class="border-b border-[#415A77]/50">
-                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Ornn.png" alt="オーンのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
-                                <td class="p-3 font-bold text-green-400">オーン</td><td class="p-3 font-bold text-green-400">易</td><td class="p-3">お互いファーム勝負。スケールで勝るため、焦らずRのスタックを溜める。</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sion.png" alt="サイオンのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
-                                <td class="p-3 font-bold text-green-400">サイオン</td><td class="p-3 font-bold text-green-400">易</td><td class="p-3">Qで相手のQを妨害。Rの確定ダメージが有効。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">アイテムビルド：巨人の食卓</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Starting Items -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">スタートアイテム</h3>
+                        <div class="flex items-center gap-4">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/1054.png" class="item-icon" alt="ドランシールド">
+                            <p>ドランシールド + 体力ポーションが最も安定したスタート。</p>
+                        </div>
+                    </div>
+                    <!-- Core Build -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">コアビルド</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3084.png" class="item-icon" alt="ハートスティール"><p><span class="font-bold">ハートスティール:</span> チョ＝ガスのスケールを爆発させる運命のアイテム。</p></li>
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3068.png" class="item-icon" alt="サンファイア・イージス"><p><span class="font-bold">サンファイア・イージス:</span> 硬さと継続ダメージを両立。</p></li>
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/1103.png" class="item-icon" alt="プレートスチールキャップ"><p><span class="font-bold">プレートスチールキャップ:</span> 対物理ダメージの基本。</p></li>
+                        </ul>
+                    </div>
+                    <!-- Situational Items -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">状況別アイテム</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/6667.png" class="item-icon" alt="カオニック・ルークウォール"><p>対APバースト用。</p></li>
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3075.png" class="item-icon" alt="ソーンメイル"><p>回復阻害が必要な場合に。</p></li>
+                            <li class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3143.png" class="item-icon" alt="ランデュイン・オーメン"><p>対クリティカル用。</p></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
+
+            <!-- Matchups -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">マッチアップガイド：対面との駆け引き</h2>
+                <div class="space-y-6">
+                    <!-- Fiora -->
+                    <div class="flex flex-col md:flex-row gap-4 p-4 bg-[#1B263B]/50 rounded-lg">
+                        <div class="flex-shrink-0 flex flex-col items-center w-full md:w-24">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" class="w-16 h-16 rounded-full border-4 border-red-500" alt="フィオラ">
+                            <p class="font-bold text-red-400 mt-2">激高</p>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl text-white">vs フィオラ</h3>
+                            <p><span class="font-bold text-red-400">脅威:</span> 最大体力割合の確定ダメージとWのパリィ。チョ＝ガスの全てをカウンターする存在。</p>
+                            <p><span class="font-bold text-cyan-300">戦略:</span> この対面はマルファイトに任せるのが最善。もし対峙してしまったら、タワー下で耐え、Qでのラストヒットを徹底する。Wのサイレンスは、フィオラがQで仕掛けてきた瞬間に使うこと。絶対に殴り合わない。</p>
+                        </div>
+                    </div>
+                    <!-- Darius -->
+                    <div class="flex flex-col md:flex-row gap-4 p-4 bg-[#1B263B]/50 rounded-lg">
+                        <div class="flex-shrink-0 flex flex-col items-center w-full md:w-24">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" class="w-16 h-16 rounded-full border-4 border-red-500" alt="ダリウス">
+                            <p class="font-bold text-red-400 mt-2">高</p>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl text-white">vs ダリウス</h3>
+                            <p><span class="font-bold text-red-400">脅威:</span> 序盤の圧倒的な戦闘力とEからのコンボ、Rの確定ダメージ。</p>
+                            <p><span class="font-bold text-cyan-300">戦略:</span> Eの射程外を常に意識する。Qでのラストヒットを心がけ、絶対に前に出ない。味方のガンクが唯一の活路。WのサイレンスでQの回復を妨害できるが、リスクが高い。</p>
+                        </div>
+                    </div>
+                    <!-- Sett -->
+                    <div class="flex flex-col md:flex-row gap-4 p-4 bg-[#1B263B]/50 rounded-lg">
+                        <div class="flex-shrink-0 flex flex-col items-center w-full md:w-24">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" class="w-16 h-16 rounded-full border-4 border-yellow-500" alt="セト">
+                            <p class="font-bold text-yellow-400 mt-2">中</p>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl text-white">vs セト</h3>
+                            <p><span class="font-bold text-red-400">脅威:</span> Wのシールドと中心部の確定ダメージ。チョ＝ガスの高体力が相手の火力源になる。</p>
+                            <p><span class="font-bold text-cyan-300">戦略:</span> セトのWの射線上に立たない。ダメージ交換をする際は、相手のWを誘発させてから下がる。Wのサイレンスは、相手が仕掛けてきた際のカウンターとして非常に有効。</p>
+                        </div>
+                    </div>
+                    <!-- Ornn -->
+                    <div class="flex flex-col md:flex-row gap-4 p-4 bg-[#1B263B]/50 rounded-lg">
+                        <div class="flex-shrink-0 flex flex-col items-center w-full md:w-24">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Ornn.png" class="w-16 h-16 rounded-full border-4 border-green-500" alt="オーン">
+                            <p class="font-bold text-green-400 mt-2">易</p>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl text-white">vs オーン</h3>
+                            <p><span class="font-bold text-red-400">脅威:</span> Wの炎による脆性効果からのコンボ。</p>
+                            <p><span class="font-bold text-cyan-300">戦略:</span> 純粋なファーム勝負。お互いに倒しきれないため、Rのスタックを安全に溜めることに集中する。相手のRはQで中断させることができる。スケールで勝るため焦る必要はない。</p>
+                        </div>
+                    </div>
+                    <!-- Malphite -->
+                    <div class="flex flex-col md:flex-row gap-4 p-4 bg-[#1B263B]/50 rounded-lg">
+                        <div class="flex-shrink-0 flex flex-col items-center w-full md:w-24">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Malphite.png" class="w-16 h-16 rounded-full border-4 border-green-500" alt="マルファイト">
+                            <p class="font-bold text-green-400 mt-2">易</p>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl text-white">vs マルファイト</h3>
+                            <p><span class="font-bold text-red-400">脅威:</span> Qによる一方的なハラス。</p>
+                            <p><span class="font-bold text-cyan-300">戦略:</span> 魔法防御アイテム（スペクターカウル）を早めに積むことで、Qのダメージを大幅に軽減できる。相手はマナが枯渇しやすいため、サステインで勝る。これもファーム勝負に持ち込めば有利。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
+        <footer class="text-center mt-12 text-[#415A77]">
+            <p>このガイドは2025年6月下旬のパッチ状況を元に作成されています。</p>
+        </footer>
     </div>
 </body>
 </html>
