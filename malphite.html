@@ -31,43 +31,79 @@
                 <section class="p-6 md:p-8 rounded-2xl glass-card">
                     <h2 class="text-2xl font-bold text-white mb-4">スキルオーダー</h2>
                     <p class="text-lg text-[#E0E1DD] mb-4">Q上げでハラス性能を最大化し、次にEを上げて物理防御と攻撃速度低下の効果を高めます。</p>
-                    <div class="flex space-x-4 text-center">
-                        <div class="flex-1"><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">Q</p><p class="mt-1 text-sm">Lv 1, 4, 5, 7, 9</p></div>
-                        <div class="flex-1"><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">E</p><p class="mt-1 text-sm">Lv 2, 8, 10, 12, 13</p></div>
-                        <div class="flex-1"><p class="text-2xl font-bold bg-[#1B263B] rounded-md py-2">W</p><p class="mt-1 text-sm">Lv 3, 14, 15, 17, 18</p></div>
-                        <div class="flex-1"><p class="text-2xl font-bold bg-cyan-400 text-black rounded-md py-2">R</p><p class="mt-1 text-sm">Lv 6, 11, 16</p></div>
+                    <div class="grid grid-cols-4 gap-2 text-center">
+                        <div>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/SeismicShard.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="サイズミックシャードのスキルアイコン">
+                            <p class="text-lg font-bold mt-1">Q</p>
+                        </div>
+                        <div>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Landslide.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="グラウンドスラムのスキルアイコン">
+                            <p class="text-lg font-bold mt-1">E</p>
+                        </div>
+                        <div>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MalphiteW.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-[#415A77]" alt="サンダークラップのスキルアイコン">
+                            <p class="text-lg font-bold mt-1">W</p>
+                        </div>
+                        <div>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/UFSlash.png" class="w-16 h-16 rounded-lg mx-auto border-2 border-cyan-400" alt="アンストッパブル・フォースのスキルアイコン">
+                            <p class="text-lg font-bold mt-1">R</p>
+                        </div>
                     </div>
                 </section>
                 <section class="p-6 md:p-8 rounded-2xl glass-card">
                     <h2 class="text-2xl font-bold text-white mb-4">対ADファイター用ビルド</h2>
                     <p class="text-lg text-[#E0E1DD] mb-4">物理防御力（AR）を徹底的に高めるビルドです。相手はあなたに傷一つ付けられなくなります。</p>
-                    <ol class="list-decimal list-inside space-y-2 text-lg">
-                        <li><span class="font-bold">サンファイア・イージス:</span> ファーム、戦闘、硬さの全てを補う。</li>
-                        <li><span class="font-bold">プレートスチールキャップ:</span> 必須。</li>
-                        <li><span class="font-bold">ブランブルベスト → ソーンメイル:</span> 回復を持つ敵に。</li>
-                        <li><span class="font-bold">フローズンハート:</span> 通常攻撃主体の敵への最終兵器。</li>
-                        <li><span class="font-bold">ランデュイン・オーメン:</span> クリティカルダメージへの対策。</li>
-                    </ol>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3068.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="サンファイア・イージスのアイテムアイコン"><span class="font-bold">サンファイア・イージス:</span><span class="ml-2 text-sm">硬さと戦闘能力。</span></li>
+                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3110.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="フローズンハートのアイテムアイコン"><span class="font-bold">フローズンハート:</span><span class="ml-2 text-sm">通常攻撃主体の敵への最終兵器。</span></li>
+                        <li class="flex items-center"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3075.png" class="w-12 h-12 rounded-md mr-4 border-2 border-[#415A77]" alt="ソーンメイルのアイテムアイコン"><span class="font-bold">ソーンメイル:</span><span class="ml-2 text-sm">回復を持つ敵に。</span></li>
+                    </ul>
                 </section>
             </div>
 
             <section class="p-6 md:p-8 rounded-2xl glass-card">
                 <h2 class="text-2xl font-bold text-white mb-4">マッチアップガイド</h2>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-left">
-                        <thead>
+                    <table class="w-full text-left align-middle">
+                        <thead class="text-sm text-[#E0E1DD]">
                             <tr class="border-b border-[#415A77]">
+                                <th class="p-3 w-20"></th>
                                 <th class="p-3">チャンピオン</th>
                                 <th class="p-3">難易度</th>
                                 <th class="p-3">ワンポイント攻略</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-[#415A77]/50"><td class="p-3 font-bold text-green-400">ダリウス</td><td class="p-3 font-bold text-green-400">易</td><td class="p-3">Qでハラスし、相手がQを使ったら懐に潜る。ブランブルベスト購入で勝利確定。</td></tr>
-                            <tr class="border-b border-[#415A77]/50"><td class="p-3 font-bold text-green-400">フィオラ</td><td class="p-3 font-bold text-green-400">易</td><td class="p-3">Eの攻撃速度低下が天敵。フローズンハートを積めば相手は何もできない。</td></tr>
-                            <tr class="border-b border-[#415A77]/50"><td class="p-3 font-bold text-green-400">トリンダメア</td><td class="p-3 font-bold text-green-400">易</td><td class="p-3">フローズンハートとランデュイン・オーメンで完封。相手のR中は距離を取る。</td></tr>
-                            <tr class="border-b border-[#415A77]/50"><td class="p-3 font-bold text-red-400">モルデカイザー</td><td class="p-3 font-bold text-red-400">高</td><td class="p-3">APダメージのため物理防御が効かない。Rに捕まると勝ち目がないため、ピックしない。</td></tr>
-                            <tr class=""><td class="p-3 font-bold text-red-400">サイラス</td><td class="p-3 font-bold text-red-400">高</td><td class="p-3">APダメージと回復、Rの強奪が脅威。この対面はチョ＝ガスに任せる。</td></tr>
+                            <tr class="border-b border-[#415A77]/50">
+                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" alt="ダリウスのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
+                                <td class="p-3 font-bold text-green-400">ダリウス</td>
+                                <td class="p-3 font-bold text-green-400">易</td>
+                                <td class="p-3">Qでハラスし、相手がQを使ったら懐に潜る。ブランブルベスト購入で勝利確定。</td>
+                            </tr>
+                            <tr class="border-b border-[#415A77]/50">
+                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" alt="フィオラのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
+                                <td class="p-3 font-bold text-green-400">フィオラ</td>
+                                <td class="p-3 font-bold text-green-400">易</td>
+                                <td class="p-3">Eの攻撃速度低下が天敵。フローズンハートを積めば相手は何もできない。</td>
+                            </tr>
+                            <tr class="border-b border-[#415A77]/50">
+                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Tryndamere.png" alt="トリンダメアのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
+                                <td class="p-3 font-bold text-green-400">トリンダメア</td>
+                                <td class="p-3 font-bold text-green-400">易</td>
+                                <td class="p-3">フローズンハートとランデュイン・オーメンで完封。相手のR中は距離を取る。</td>
+                            </tr>
+                            <tr class="border-b border-[#415A77]/50">
+                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Mordekaiser.png" alt="モルデカイザーのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
+                                <td class="p-3 font-bold text-red-400">モルデカイザー</td>
+                                <td class="p-3 font-bold text-red-400">高</td>
+                                <td class="p-3">APダメージのため物理防御が効かない。Rに捕まると勝ち目がないため、ピックしない。</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sylas.png" alt="サイラスのイラスト" class="w-12 h-12 rounded-full object-cover border-2 border-[#415A77]"></td>
+                                <td class="p-3 font-bold text-red-400">サイラス</td>
+                                <td class="p-3 font-bold text-red-400">高</td>
+                                <td class="p-3">APダメージと回復、Rの強奪が脅威。この対面はチョ＝ガスに任せる。</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
