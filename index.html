@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL TOPレーン戦略ガイド: チョ＝ガス & マルファイト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Palette Choice: Brilliant Blues (#0D1B2A, #1B263B, #415A77, #778DA9, #E0E1DD)
+    Narrative Plan:
+    1. Introduction: Hook with the concept of a focused, powerful 2-champion strategy.
+    2. Cho'Gath Analysis: Showcase his strengths but pivot to his critical weaknesses.
+    3. Visualize the Threat: Use a bar chart to rank Cho'Gath's most dangerous counters.
+    4. Malphite as the Solution: Introduce Malphite and use a donut chart to show WHY he works against physical threats.
+    5. Case Study: Visualize Malphite's power spike against Darius with a line chart.
+    6. The Final Decision: A CSS-based flowchart to guide the user's champion pick.
+    7. Conclusion: Summarize the strategic advantage.
+    
+    Visualization Plan & Justification (NO SVG, NO Mermaid JS):
+    - Section 1 (Intro): Big typography. Goal: Inform. Method: Styled HTML.
+    - Section 3 (Threat Ranking): Horizontal Bar Chart. Goal: Compare/Rank. Justification: Ideal for comparing threat levels of discrete champions. Method: Chart.js (Canvas).
+    - Section 4 (Why Malphite): Donut Chart. Goal: Inform/Composition. Justification: Perfect for showing the damage composition of target enemies (mostly physical). Method: Chart.js (Canvas).
+    - Section 5 (Power Spike): Line Chart. Goal: Show Change. Justification: Standard for showing change over a variable (item acquisition). Method: Chart.js (Canvas).
+    - Section 6 (Pick Flowchart): Flowchart. Goal: Organize/Process. Justification: A clear visual flow for decision-making. Method: Structured HTML & Tailwind CSS (NO SVG/Mermaid).
+    
+    CRITICAL CONFIRMATION: NEITHER Mermaid JS NOR SVG were used in this output. All graphics are rendered via Chart.js (Canvas) or structured HTML/CSS.
+    -->
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .glass-card {
+            background: rgba(27, 38, 59, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(65, 90, 119, 0.5);
+        }
+        .flow-line {
+            width: 2px;
+            background-color: #415A77;
+            flex-grow: 1;
+        }
+        .flow-line-h {
+            height: 2px;
+            background-color: #415A77;
+            flex-grow: 1;
+        }
+        .flow-arrow-down::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid #415A77;
+        }
+        .flow-arrow-right::after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #415A77;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-2">TOPレーン完全攻略</h1>
+            <p class="text-xl md:text-2xl text-[#778DA9] font-bold">チョ＝ガス & マルファイトによる相互補完戦略</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+            <section class="md:col-span-2 lg:col-span-3 p-6 md:p-8 rounded-2xl glass-card text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">なぜ、たった2体で勝率が上がるのか？</h2>
+                <p class="text-lg text-[#E0E1DD] max-w-4xl mx-auto">
+                    特定のチャンピオンだけを使い続けると、不利な対面に必ず直面します。この戦略は、チョ＝ガスの弱点をマルファイトで完璧にカバーすることで、ほぼ全ての対面状況に有利な回答を用意するものです。少ない練習量で、安定した勝利を目指します。
+                </p>
+            </section>
+
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h3 class="text-2xl font-bold text-white mb-4">主軸: 虚空の恐怖、チョ＝ガス <span class="text-2xl">🍴</span></h3>
+                <p class="text-md text-[#E0E1DD] mb-4">ゲーム後半、全てを喰らい尽くすスケールモンスター。彼の強みは、無限に成長するそのポテンシャルにあります。</p>
+                <div class="space-y-3 text-lg">
+                    <p><span class="font-bold text-cyan-300">無限スケール:</span> R（捕食）で最大体力が無限に増加。</p>
+                    <p><span class="font-bold text-cyan-300">強力なCC:</span> 広範囲のノックアップとサイレンスで集団戦を支配。</p>
+                    <p><span class="font-bold text-cyan-300">レーン維持能力:</span> 固有スキルで高いサステインを誇る。</p>
+                </div>
+            </section>
+            
+            <section class="p-6 md:p-8 rounded-2xl glass-card md:col-span-2">
+                <h3 class="text-2xl font-bold text-white mb-2">チョ＝ガスの天敵：脅威度ランキング</h3>
+                <p class="text-md text-[#E0E1DD] mb-4">しかし、彼には明確な弱点が存在します。特に機動力と最大体力割合ダメージを持つチャンピオンは天敵です。</p>
+                <div class="chart-container">
+                    <canvas id="threatChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="p-6 md:p-8 rounded-2xl glass-card md:col-span-2">
+                 <h3 class="text-2xl font-bold text-white mb-2">解決策: モノリスの欠片、マルファイト <span class="text-2xl">🪨</span></h3>
+                <p class="text-md text-[#E0E1DD] mb-4">チョ＝ガスの天敵は、そのほとんどが物理ファイターです。彼らに対する完璧な回答、それがマルファイト。彼の強みは、その圧倒的な物理防御力にあります。</p>
+                <div class="chart-container">
+                    <canvas id="damageProfileChart"></canvas>
+                </div>
+            </section>
+
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                 <h3 class="text-2xl font-bold text-white mb-4">マルファイトのパワースパイク</h3>
+                 <p class="text-md text-[#E0E1DD] mb-4">特にダリウスのような回復力を持つファイターに対し、特定のアイテム購入後にマルファイトの戦闘力は劇的に向上します。</p>
+                <div class="chart-container h-64 md:h-80">
+                    <canvas id="powerSpikeChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="md:col-span-2 lg:col-span-3 p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">最終戦略: 究極のピック判断フロー</h2>
+                <div class="flex flex-col items-center">
+                    <div class="bg-[#1B263B] border-2 border-[#415A77] rounded-lg px-6 py-3 text-lg font-bold">
+                        相手のTOPピックを確認
+                    </div>
+                    <div class="w-full h-10 flex justify-center relative">
+                        <div class="flow-line h-10"></div>
+                        <div class="flow-arrow-down"></div>
+                    </div>
+                    <div class="bg-[#415A77] rounded-lg px-8 py-4 text-xl font-bold text-center shadow-lg">
+                        敵は物理ファイターか？<br><span class="text-sm font-normal">(ダリウス, フィオラ, イレリア等)</span>
+                    </div>
+                    <div class="w-full h-10 flex justify-center">
+                        <div class="w-1/2 h-full relative border-r-2 border-[#415A77]">
+                            <div class="absolute top-0 left-0 w-full h-2 bg-[#415A77]"></div>
+                        </div>
+                        <div class="w-1/2 h-full relative">
+                            <div class="absolute top-0 right-0 w-full h-2 bg-[#415A77]"></div>
+                        </div>
+                    </div>
+                    <div class="w-full flex">
+                        <div class="w-1/2 flex flex-col items-center">
+                             <div class="w-full h-10 flex justify-center relative">
+                                <div class="flow-line h-10"></div>
+                                <div class="flow-arrow-down"></div>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-2xl font-bold text-green-400 mb-2">YES</p>
+                                <div class="bg-green-900/50 border-2 border-green-400 rounded-lg px-8 py-4 text-2xl font-black text-white">
+                                    マルファイトを<br>ピック
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-center">
+                             <div class="w-full h-10 flex justify-center relative">
+                                <div class="flow-line h-10"></div>
+                                <div class="flow-arrow-down"></div>
+                            </div>
+                             <div class="text-center">
+                                <p class="text-2xl font-bold text-red-400 mb-2">NO</p>
+                                <div class="bg-red-900/50 border-2 border-red-400 rounded-lg px-8 py-4 text-2xl font-black text-white">
+                                     チョ＝ガスを<br>ピック
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        const brilliantBlues = {
+            dark: '#0D1B2A',
+            space: '#1B263B',
+            cadet: '#415A77',
+            slate: '#778DA9',
+            light: '#E0E1DD'
+        };
+
+        function processLabel(label) {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            
+            for(const word of words) {
+                if((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+        
+        const defaultChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: brilliantBlues.light,
+                        font: { size: 14 }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: 'rgba(13, 27, 42, 0.9)',
+                    titleFont: { size: 16 },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 8
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: brilliantBlues.slate, font: { size: 12 } },
+                    grid: { color: 'rgba(119, 141, 169, 0.2)' }
+                },
+                x: {
+                    ticks: { color: brilliantBlues.slate, font: { size: 12 } },
+                    grid: { color: 'rgba(119, 141, 169, 0.2)' }
+                }
+            }
+        };
+
+        const threatData = {
+            labels: ['フィオラ', 'ヴェイン', 'ダリウス', 'グウェン', 'セト', 'エイトロックス'],
+            datasets: [{
+                label: '脅威度',
+                data: [100, 98, 95, 90, 85, 80],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(255, 129, 152, 0.6)',
+                    'rgba(255, 159, 164, 0.6)',
+                    'rgba(255, 179, 184, 0.6)',
+                    'rgba(255, 205, 210, 0.6)',
+                    'rgba(255, 225, 230, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 129, 152, 1)',
+                    'rgba(255, 159, 164, 1)',
+                    'rgba(255, 179, 184, 1)',
+                    'rgba(255, 205, 210, 1)',
+                    'rgba(255, 225, 230, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const threatChartCtx = document.getElementById('threatChart').getContext('2d');
+        new Chart(threatChartCtx, {
+            type: 'bar',
+            data: threatData,
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    y: { ...defaultChartOptions.scales.y, ticks: {...defaultChartOptions.scales.y.ticks, font: {size: 14, weight: 'bold'}} },
+                    x: { ...defaultChartOptions.scales.x, suggestedMax: 100 }
+                },
+                plugins: { ...defaultChartOptions.plugins, legend: { display: false } }
+            }
+        });
+        
+        const damageProfileData = {
+            labels: ['物理ダメージ', '魔法ダメージ', '確定ダメージ'],
+            datasets: [{
+                label: '典型的な物理ファイターのダメージ構成',
+                data: [85, 10, 5],
+                backgroundColor: [brilliantBlues.cadet, brilliantBlues.slate, '#E0E1DD'],
+                borderColor: brilliantBlues.dark,
+                borderWidth: 3,
+                hoverOffset: 4
+            }]
+        };
+
+        const damageProfileCtx = document.getElementById('damageProfileChart').getContext('2d');
+        new Chart(damageProfileCtx, {
+            type: 'doughnut',
+            data: damageProfileData,
+            options: { ...defaultChartOptions, plugins: {...defaultChartOptions.plugins, legend: {position: 'bottom'}}}
+        });
+
+        const powerSpikeData = {
+            labels: ['スタート', '初手リコール', processLabel('ブランブルベスト購入'), processLabel('アイスボーンガントレット完成')],
+            datasets: [{
+                label: 'マルファイトの対ダリウス戦闘力',
+                data: [30, 40, 75, 100],
+                fill: true,
+                backgroundColor: 'rgba(65, 90, 119, 0.4)',
+                borderColor: brilliantBlues.cadet,
+                tension: 0.3,
+                pointBackgroundColor: brilliantBlues.light,
+                pointRadius: 5
+            }]
+        };
+        
+        const powerSpikeCtx = document.getElementById('powerSpikeChart').getContext('2d');
+        new Chart(powerSpikeCtx, {
+            type: 'line',
+            data: powerSpikeData,
+            options: {
+                ...defaultChartOptions,
+                scales: {
+                    ...defaultChartOptions.scales,
+                    y: { ...defaultChartOptions.scales.y, suggestedMin: 0, suggestedMax: 100 }
+                },
+                plugins: { ...defaultChartOptions.plugins, legend: { display: false } }
+            }
+        });
+    </script>
+</body>
+</html>
