@@ -16,6 +16,16 @@
         .champ-icon { width: 3rem; height: 3rem; border-radius: 50%; object-fit: cover; border: 2px solid #415A77; }
         .rune-main { width: 5rem; height: 5rem; border-radius: 50%; }
         .rune-sub { width: 3rem; height: 3rem; border-radius: 50%; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 1.25rem;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: #415A77;
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -31,26 +41,41 @@
             <!-- Introduction -->
             <section class="p-6 md:p-8 rounded-2xl glass-card">
                 <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">チョ＝ガスとは？</h2>
-                <p class="text-lg text-[#E0E1DD] leading-relaxed">
-                    チョ＝ガスは、LoLにおける「レイトゲーム・ハイパーキャリー」という概念を最も純粋な形で体現するタンクチャンピオンです。彼の本質は「時間」。序盤の弱さを乗り越え、ファームとキルによってR<span class="font-bold text-cyan-300">「捕食」</span>のスタックを積み重ねることで、ゲーム後半には他の追随を許さない圧倒的な体力と火力を持つ怪物へと変貌します。彼の前では、アサシンはワンコンボを耐えられ、マークスマンは一撃で沈み、タワーすらも脆いクッキーのように砕け散ります。このガイドでは、そんな虚空の恐怖を完全にマスターするための全てを解説します。
-                </p>
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg" class="w-full md:w-1/3 h-auto rounded-lg border-2 border-[#415A77]" alt="チョ＝ガスのスプラッシュアート">
+                    <p class="text-lg text-[#E0E1DD] leading-relaxed flex-1">
+                        チョ＝ガスは、LoLにおける「レイトゲーム・ハイパーキャリー」という概念を最も純粋な形で体現するタンクチャンピオンです。彼の本質は「時間」。序盤の弱さを乗り越え、ファームとキルによってR<span class="font-bold text-cyan-300">「捕食」</span>のスタックを積み重ねることで、ゲーム後半には他の追随を許さない圧倒的な体力と火力を持つ怪物へと変貌します。彼の前では、アサシンはワンコンボを耐えられ、マークスマンは一撃で沈み、タワーすらも脆いクッキーのように砕け散ります。このガイドでは、そんな虚空の恐怖を完全にマスターするための全てを解説します。
+                    </p>
+                </div>
             </section>
-
-            <!-- Playstyle -->
+            
+            <!-- Power Spike -->
             <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">立ち回りの基本</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-cyan-300 mb-2">序盤：生存とファーム</h3>
-                        <p>チョ＝ガスの序盤は弱いです。目的はただ一つ、<span class="font-bold">「死なずに経験値とCSを稼ぐ」</span>こと。固有スキルによる回復を活かし、危険なミニオンはQで処理。無理な戦闘は絶対に避け、タワー下で耐える時間を長くしましょう。</p>
-                    </div>
-                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-cyan-300 mb-2">中盤：捕食の開始</h3>
-                        <p>Lv6になりRを覚えたら、チョ＝ガスの時間が始まります。キルできそうな相手には積極的にRを使い、スタックを溜めましょう。ミニオンや中立モンスターでもスタックは溜まるので、チャンスを逃さないこと。テレポートを活かして小規模戦に参加し、キルを狙います。</p>
-                    </div>
-                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-cyan-300 mb-2">終盤：チームの不沈艦</h3>
-                        <p>育ちきったチョ＝ガスは、チームの最前線に立つ不沈艦です。敵の攻撃をその巨体で全て受け止め、後衛のキャリーを守ります。QとWのCCで敵の動きを妨害し、Rの確定ダメージで危険な敵を確実に仕留めましょう。</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">パワースパイク：怪物の成長曲線</h2>
+                <div class="relative w-full timeline py-4">
+                    <div class="grid grid-cols-4 gap-4 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full border-4 border-[#0D1B2A] flex items-center justify-center font-bold text-black">1</div>
+                            <h3 class="font-bold mt-2">序盤 (Lv 1-5)</h3>
+                            <p class="text-sm text-[#778DA9]">最も弱い時間帯。生存とファームが最優先。</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full border-4 border-[#0D1B2A] flex items-center justify-center font-bold text-black">2</div>
+                            <h3 class="font-bold mt-2">Lv 6 (R習得)</h3>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Feast.png" class="w-12 h-12 rounded-lg my-2" alt="捕食">
+                            <p class="text-sm text-[#778DA9]">捕食開始。キルプレッシャーが生まれ、スケールが加速する。</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full border-4 border-[#0D1B2A] flex items-center justify-center font-bold text-black">3</div>
+                            <h3 class="font-bold mt-2">ハートスティール完成</h3>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3084.png" class="w-12 h-12 rounded-lg my-2" alt="ハートスティール">
+                            <p class="text-sm text-[#778DA9]">体力と火力が大幅に向上。戦闘への影響力が増す。</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-10 h-10 bg-cyan-500 rounded-full border-4 border-[#0D1B2A] flex items-center justify-center font-bold text-black">4</div>
+                            <h3 class="font-bold mt-2">終盤 (Lv 16+)</h3>
+                            <p class="text-sm text-[#778DA9]">Rスタックとアイテムが揃い、誰も止められない不沈艦となる。</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -125,6 +150,28 @@
                     </div>
                 </section>
             </div>
+            
+            <!-- Countered Strategy -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card border-2 border-yellow-500/50">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center">逆境の戦略：カウンターピックされた場合</h2>
+                <p class="text-lg text-[#E0E1DD] max-w-4xl mx-auto text-center mb-6">
+                    自分が先にチョ＝ガスをピックし、相手にフィオラやダリウスといった有利なチャンピオンを出される「カウンターピック」はTOPレーナーの宿命です。しかし、正しい知識があれば、この逆境は乗り越えられます。目的を「レーンで勝つ」から<span class="font-bold text-yellow-300">「死なずにスケールし、チームの勝利に貢献する」</span>に切り替えましょう。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">① 心構えを変える</h3>
+                        <p>レーンでの1v1は捨てます。あなたの価値は時間と共に増大します。キルを与えず、経験値を吸い続けることが勝利です。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">② 立ち回りを変える</h3>
+                        <p>タワー下でのファームを徹底し、危険なミニオンはQで処理します。CSをいくつか諦める勇気を持ち、味方ジャングラーのガンクを待ちましょう。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">③ ビルドを変える</h3>
+                        <p>ハートスティールを急がず、初手で<span class="font-semibold">ブランブルベスト</span>や<span class="font-semibold">プレートスチールキャップ</span>といった物理防御アイテムを積み、相手のダメージを軽減します。</p>
+                    </div>
+                </div>
+            </section>
 
             <!-- Matchups -->
             <section class="p-6 md:p-8 rounded-2xl glass-card">
@@ -132,7 +179,7 @@
                 <!-- Favorable -->
                 <div class="mb-8">
                     <h3 class="text-xl font-bold text-green-400 border-b-2 border-green-400/50 pb-2 mb-4">有利な対面 (有利)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Malphite.png" class="w-12 h-12 rounded-full" alt="マルファイト"><p><span class="font-bold">vs マルファイト:</span> 魔法防御を積めばQは痛くない。サステインで勝る。相手のマナ切れを誘う。初手でスペクターカウルが有効。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sion.png" class="w-12 h-12 rounded-full" alt="サイオン"><p><span class="font-bold">vs サイオン:</span> Qで相手のQを妨害。Rの確定ダメージが有効。スケール勝負で負けない。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/DrMundo.png" class="w-12 h-12 rounded-full" alt="ドクター・ムンド"><p><span class="font-bold">vs ドクター・ムンド:</span> Rの確定ダメージが有効。回復されてもバーストで上回る。回復阻害は不要。</p></div>
@@ -148,7 +195,7 @@
                 <!-- Even -->
                 <div class="mb-8">
                     <h3 class="text-xl font-bold text-yellow-400 border-b-2 border-yellow-400/50 pb-2 mb-4">五分の対面 (五分)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Garen.png" class="w-12 h-12 rounded-full" alt="ガレン"><p><span class="font-bold">vs ガレン:</span> 相手のQにWを合わせる。殴り合いは避け、Qで距離を取る。プレートスチールキャップが有効。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" class="w-12 h-12 rounded-full" alt="セト"><p><span class="font-bold">vs セト:</span> Wの中心を避ける。Wのサイレンスで反撃を狙う。プレートスチールキャップを急ぐ。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Mordekaiser.png" class="w-12 h-12 rounded-full" alt="モルデカイザー"><p><span class="font-bold">vs モルデカイザー:</span> 相手のEを避けることが最重要。サッシュ購入も視野に。カオニック・ルークウォールが有効。</p></div>
@@ -164,7 +211,7 @@
                 <!-- Unfavorable -->
                 <div>
                     <h3 class="text-xl font-bold text-red-400 border-b-2 border-red-400/50 pb-2 mb-4">不利な対面 (不利)</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" class="w-12 h-12 rounded-full" alt="フィオラ"><p><span class="font-bold">vs フィオラ:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。初手ブランブルベストとプレートスチールキャップ必須。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" class="w-12 h-12 rounded-full" alt="ダリウス"><p><span class="font-bold">vs ダリウス:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。プレートスチールキャップを急ぎ、Eの射程に入らない。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Vayne.png" class="w-12 h-12 rounded-full" alt="ヴェイン"><p><span class="font-bold">vs ヴェイン:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。ガンクを呼び、Rで捕まえる。フローズンハートが有効。</p></div>
@@ -177,6 +224,8 @@
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Jax.png" class="w-12 h-12 rounded-full" alt="ジャックス"><p><span class="font-bold">vs ジャックス:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。相手のEに対してWで対抗するが、スケールされると厳しい。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Riven.png" class="w-12 h-12 rounded-full" alt="リヴェン"><p><span class="font-bold">vs リヴェン:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。Wのサイレンスが有効だが、機動力に追いつけない。</p></div>
                         <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Renekton.png" class="w-12 h-12 rounded-full" alt="レネクトン"><p><span class="font-bold">vs レネクトン:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。序盤のダメージトレードで勝てない。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Warwick.png" class="w-12 h-12 rounded-full" alt="ワーウィック"><p><span class="font-bold">vs ワーウィック:</span> <span class="text-yellow-300">【対策】</span>モルデカイザー推奨。サステインと殴り合いで勝てない。回復阻害必須。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Tryndamere.png" class="w-12 h-12 rounded-full" alt="トリンダメア"><p><span class="font-bold">vs トリンダメア:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。相手のRの無敵時間中は何もできない。</p></div>
                     </div>
                 </div>
             </section>
