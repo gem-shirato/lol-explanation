@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モルデカイザー 超詳細・完全攻略ガイド</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #0D1B2A; color: #E0E1DD; }
+        .glass-card { background: rgba(27, 38, 59, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(65, 90, 119, 0.5); }
+        .item-icon { width: 3rem; height: 3rem; border-radius: 0.375rem; border: 2px solid #415A77; }
+        .skill-icon { width: 4rem; height: 4rem; border-radius: 0.5rem; border: 2px solid #415A77; }
+        .champ-icon { width: 3rem; height: 3rem; border-radius: 50%; object-fit: cover; border: 2px solid #415A77; }
+        .rune-main { width: 5rem; height: 5rem; border-radius: 50%; }
+        .rune-sub { width: 3rem; height: 3rem; border-radius: 50%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white">モルデカイザー 完全攻略ガイド</h1>
+            <p class="text-xl text-[#778DA9]">死の国から舞い戻りし、鉄の暴君</p>
+            <a href="../lanes/top.html" class="text-cyan-300 hover:text-cyan-100 transition-colors mt-4 inline-block">&larr; TOPレーンガイドに戻る</a>
+        </header>
+
+        <main class="space-y-12">
+            <!-- Introduction -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">モルデカイザーとは？</h2>
+                <p class="text-lg text-[#E0E1DD] leading-relaxed">
+                    モルデカイザーは、AP（魔法攻撃力）を主体とするファイターであり、ジャガーノート（重戦士）です。彼の最大の特徴は、R<span class="font-bold text-cyan-300">「死の国」</span>による強制的な1v1空間の生成能力。これにより、育ってしまった敵のエースを試合から一時的に隔離したり、ガンク合わせで確実にキルを狙ったりと、戦況を有利に操作することができます。明確なカウンターが少なく、多くの相手と渡り合えるため、<span class="font-bold text-green-300">先出し（ブラインドピック）しても安定しやすい</span>のが最大の強み。チョ＝ガスやマルファイトでは対応が難しい、特定の相手への回答となる第三の選択肢です。
+                </p>
+            </section>
+
+            <!-- Playstyle -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">立ち回りの基本</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">序盤：Qによる支配</h3>
+                        <p>Q「滅魂の一撃」は、単体の敵に当たるとダメージが増加します。これを利用し、相手がCSを取ろうとする瞬間にQを当てることで、レーンの主導権を握ります。E「死の腕」はむやみに使わず、ガンク合わせや確実なキルチャンスのために温存しましょう。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">中盤：死の国によるゲームメイク</h3>
+                        <p>Lv6以降、Rは最強の武器になります。味方ジャングラーがガンクに来たら、Rで相手を捕まえればキルは目前です。また、ドラゴンやヘラルドといったオブジェクト周りのファイトでは、敵のジャングラーをRで連れ去り、スマイト勝負をさせない動きが非常に強力です。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">終盤：敵エースの隔離</h3>
+                        <p>集団戦では、育ってしまった敵のADCやメイジといったキャリーをRで「死の国」に連れ去り、5v4の状況を作り出すのが主な仕事です。たとえ死の国で勝てなくても、7秒間敵のエースを戦線から離脱させるだけで、チームは集団戦に勝利できるでしょう。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">スキル解説と優先度</h2>
+                <div class="space-y-8 mb-8">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/passive/Mordekaiser_Passive.png" class="skill-icon" alt="Passiveアイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">Passive - 闇の隆盛</h3><p class="text-[#E0E1DD]">スキルか通常攻撃を3回当てると、周囲に継続ダメージを与えるオーラを展開し、移動速度が増加する。モルデカイザーの継続戦闘能力の源泉。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MordekaiserQ.png" class="skill-icon" alt="滅魂の一撃アイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">Q - 滅魂の一撃</h3><p class="text-[#E0E1DD]">メイスを叩きつけ範囲ダメージを与える。対象が一体の場合、ダメージが増加する。主力ダメージスキルであり、レーンでのハラスの要。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MordekaiserW.png" class="skill-icon" alt="不滅の鎧アイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">W - 不滅の鎧</h3><p class="text-[#E0E1DD]">受けたダメージを蓄積し、シールドに変換する。再発動でシールドの一部を体力として回復できる。ダメージトレードを有利にするための重要な耐久スキル。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MordekaiserE.png" class="skill-icon" alt="死の腕アイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">E - 死の腕</h3><p class="text-[#E0E1DD]">敵を引き寄せる腕を放つ。Passiveを発動させるための重要なスキルであり、ガンク合わせやコンボの起点となる。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MordekaiserR.png" class="skill-icon border-cyan-400" alt="死の国アイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">R - 死の国</h3><p class="text-[#E0E1DD]">敵チャンピオン1体を7秒間、自分だけの空間に引きずり込み、ステータスの一部を奪う。モルデカイザーの象徴であり、最強のゲームメイクスキル。</p></div>
+                    </div>
+                </div>
+                <div class="text-center p-4 bg-[#1B263B]/50 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-2">スキル上げ優先度</h3>
+                    <p class="text-2xl font-bold tracking-widest">R > Q > E > W</p>
+                    <p class="mt-2">Q上げでダメージを最大化し、次にEを上げてクールダウンを短縮、最後にWを上げます。</p>
+                </div>
+            </section>
+
+            <!-- Runes and Items -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <section class="p-6 md:p-8 rounded-2xl glass-card">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">ルーン選択：征服者</h2>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png" class="rune-main" alt="征服者">
+                        <div><h3 class="text-xl font-bold">メインパス：栄華</h3><p>継続戦闘能力を極限まで高める。</p></div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">征服者:</span> スキルと通常攻撃でスタックが溜まり、アダプティブフォースと回復効果を得る。Passiveとの相性が抜群。</p>
+                        <p><span class="font-bold text-cyan-300">凱旋:</span> キルまたはアシストで体力が回復し、ゴールドも得られる。</p>
+                        <p><span class="font-bold text-cyan-300">レジェンド: 強靭:</span> CC耐性を高め、集団戦での生存率を上げる。</p>
+                        <p><span class="font-bold text-cyan-300">背水の陣:</span> 体力が低いほど与えるダメージが増加。殴り合いで逆転を狙える。</p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7204_Resolve.png" class="rune-sub" alt="不滅">
+                        <div><h3 class="text-xl font-bold">サブパス：不滅</h3><p>レーンでの耐久力を補強。</p></div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">ボーンアーマー:</span> 敵のバーストダメージを軽減する。</p>
+                        <p><span class="font-bold text-cyan-300">気迫:</span> スロウ耐性と行動妨害耐性を得る。</p>
+                    </div>
+                </section>
+                <section class="p-6 md:p-8 rounded-2xl glass-card">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">アイテムビルドパス</h2>
+                    <div class="space-y-4">
+                        <div><h3 class="text-lg font-bold mb-2">スタート</h3><div class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/1056.png" class="item-icon" alt="ドランリング"><p><span class="font-bold">ドランリング + 体力ポーション:</span> APファイターの標準的なスタート。</p></div></div>
+                        <div><h3 class="text-lg font-bold mb-2">コアビルド (1~3手目)</h3><ul class="space-y-3">
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3152.png" class="item-icon" alt="リフトメーカー"><p><span class="font-bold">リフトメーカー:</span> 継続戦闘でダメージが増加し、オムニヴァンプ（回復効果）も得られる。モルデカイザーの戦い方に完璧にマッチ。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3111.png" class="item-icon" alt="マーキュリーブーツ"><p><span class="font-bold">マーキュリーブーツ:</span> 魔法防御と行動妨害耐性を確保。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3157.png" class="item-icon" alt="ゾーニャの砂時計"><p><span class="font-bold">ゾーニャの砂時計:</span> 物理防御と、無敵になれる強力な発動効果を持つ。敵の強力なスキルを避けるために必須。</p></li>
+                        </ul></div>
+                        <div><h3 class="text-lg font-bold mb-2">4手目以降の選択肢</h3><ul class="space-y-3">
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3135.png" class="item-icon" alt="ヴォイドスタッフ"><p><span class="font-bold">ヴォイドスタッフ:</span> 敵が魔法防御を積んできた場合の回答。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3116.png" class="item-icon" alt="クリスタルセプター"><p><span class="font-bold">クリスタルセプター:</span> スキルにスロウ効果を付与し、敵を逃がさない。Passiveとの相性が良い。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3089.png" class="item-icon" alt="ラバドン・デスキャップ"><p><span class="font-bold">ラバドン・デスキャップ:</span> 育っている場合に、APを爆発的に増加させる。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3075.png" class="item-icon" alt="ソーンメイル"><p><span class="font-bold">ソーンメイル:</span> 敵に回復能力を持つADチャンピオンが多い場合に。防御的な選択肢。</p></li>
+                        </ul></div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Matchups -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">マッチアップガイド：完全相性表</h2>
+                <!-- Favorable -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-green-400 border-b-2 border-green-400/50 pb-2 mb-4">有利な対面 (有利)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Garen.png" class="w-12 h-12 rounded-full" alt="ガレン"><p><span class="font-bold">vs ガレン:</span> APダメージとPassiveの継続ダメージで有利。相手のRにRを合わせることでカウンター可能。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" class="w-12 h-12 rounded-full" alt="セト"><p><span class="font-bold">vs セト:</span> 相手のWのシールドをWで耐え、継続ダメージで勝つ。Rで相手の土俵から引きずり出す。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Nasus.png" class="w-12 h-12 rounded-full" alt="ナサス"><p><span class="font-bold">vs ナサス:</span> 序盤から積極的にプレッシャーをかけ、ファームさせない。Rで相手のR中のステータス上昇を奪う。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Shen.png" class="w-12 h-12 rounded-full" alt="シェン"><p><span class="font-bold">vs シェン:</span> 相手がRで他レーンに飛ぼうとしたら、Rでキャンセルさせることができる。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Teemo.png" class="w-12 h-12 rounded-full" alt="ティーモ"><p><span class="font-bold">vs ティーモ:</span> 相手のブラインドが厄介だが、Eで捕まえれば有利。Lv6以降はRでキルチャンス。</p></div>
+                    </div>
+                </div>
+                <!-- Even -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-yellow-400 border-b-2 border-yellow-400/50 pb-2 mb-4">五分の対面 (五分)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" class="w-12 h-12 rounded-full" alt="ダリウス"><p><span class="font-bold">vs ダリウス:</span> 純粋なスキル勝負。相手のEを誘ってからE-Qで反撃。回復阻害アイテムが有効。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Gwen.png" class="w-12 h-12 rounded-full" alt="グウェン"><p><span class="font-bold">vs グウェン:</span> Rで相手のWを無効化できる。相手のQの中心を避ける立ち回りが重要。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Aatrox.png" class="w-12 h-12 rounded-full" alt="エイトロックス"><p><span class="font-bold">vs エイトロックス:</span> 回復阻害アイテム（オブリビオンオーブ）を早めに積む。相手のQの3段目を避けることが鍵。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Jax.png" class="w-12 h-12 rounded-full" alt="ジャックス"><p><span class="font-bold">vs ジャックス:</span> 相手のE（カウンター）中は攻撃しない。効果が切れた瞬間に反撃する。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Camille.png" class="w-12 h-12 rounded-full" alt="カミール"><p><span class="font-bold">vs カミール:</span> 相手のEでの仕掛けに合わせてWのシールドを使う。Rで相手のRから逃れることはできないので注意。</p></div>
+                    </div>
+                </div>
+                <!-- Unfavorable -->
+                <div>
+                    <h3 class="text-xl font-bold text-red-400 border-b-2 border-red-400/50 pb-2 mb-4">不利な対面 (不利)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" class="w-12 h-12 rounded-full" alt="フィオラ"><p><span class="font-bold">vs フィオラ:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。相手のパリィにRを合わせられると致命的。回復阻害必須。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Olaf.png" class="w-12 h-12 rounded-full" alt="オラフ"><p><span class="font-bold">vs オラフ:</span> <span class="text-yellow-300">【対策】</span>相手のRでこちらのRを無効化される。序盤の殴り合いが非常に強い。戦わないのが一番。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Kled.png" class="w-12 h-12 rounded-full" alt="クレッド"><p><span class="font-bold">vs クレッド:</span> <span class="text-yellow-300">【対策】</span>回復阻害が厄介。相手のEを誘い、Qで反撃する。スカールから降ろすことを意識。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Vayne.png" class="w-12 h-12 rounded-full" alt="ヴェイン"><p><span class="font-bold">vs ヴェイン:</span> <span class="text-yellow-300">【対策】</span>マルファイト推奨。カイトされ、近づくことすら困難。フラッシュからのE→Rが唯一のチャンス。</p></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="text-center mt-12 text-[#415A77]">
+            <p>このガイドは2025年6月下旬のパッチ状況を元に作成されています。</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マルファイト 超詳細・完全攻略ガイド</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #0D1B2A; color: #E0E1DD; }
+        .glass-card { background: rgba(27, 38, 59, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(65, 90, 119, 0.5); }
+        .item-icon { width: 3rem; height: 3rem; border-radius: 0.375rem; border: 2px solid #415A77; }
+        .skill-icon { width: 4rem; height: 4rem; border-radius: 0.5rem; border: 2px solid #415A77; }
+        .champ-icon { width: 3rem; height: 3rem; border-radius: 50%; object-fit: cover; border: 2px solid #415A77; }
+        .rune-main { width: 5rem; height: 5rem; border-radius: 50%; }
+        .rune-sub { width: 3rem; height: 3rem; border-radius: 50%; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-white">マルファイト 完全攻略ガイド</h1>
+            <p class="text-xl text-[#778DA9]">物理攻撃チャンピオンの希望を打ち砕くモノリス</p>
+            <a href="../lanes/top.html" class="text-cyan-300 hover:text-cyan-100 transition-colors mt-4 inline-block">&larr; TOPレーンガイドに戻る</a>
+        </header>
+
+        <main class="space-y-12">
+            <!-- Introduction -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">マルファイトとは？</h2>
+                <p class="text-lg text-[#E0E1DD] leading-relaxed">
+                    マルファイトは、リーグ・オブ・レジェンドにおける「カウンターピック」という概念の象徴です。彼の存在意義はただ一つ、<span class="font-bold text-green-300">物理攻撃チャンピオン（AD）を完全に無力化すること</span>。物理防御力を上げれば上げるほど、自身の火力と耐久性が増していくというユニークな特性を持ちます。レーン戦ではQ<span class="font-bold text-cyan-300">「サイズミックシャード」</span>による一方的なハラスで相手を疲弊させ、集団戦ではR<span class="font-bold text-cyan-300">「アンストッパブル・フォース」</span>というゲーム最強のイニシエートスキルで戦況を覆します。このガイドは、岩のように硬く、そして理不尽なまでのカウンター性能を誇るモノリスの化身をマスターするための全てを記したものです。
+                </p>
+            </section>
+
+            <!-- Playstyle -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">立ち回りの基本</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">序盤：ハラスとマナ管理</h3>
+                        <p>相手が物理チャンピオンなら、積極的にQでハラスします。ただしマナ消費が激しいので、マナフローバンドは必須。殴り合いは避け、Qで削って有利を作るのが基本。相手が魔法チャンピオンの場合は、ハラスを控え、タワー下で安全にファームします。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">中盤：Rのプレッシャー</h3>
+                        <p>Lv6になりRを覚えたら、マルファイトのキルプレッシャーが格段に上がります。味方ジャングラーを呼び、Rを起点にガンクを成功させましょう。また、テレポートとRを使い、BOTレーンやドラゴンファイトに介入する動きは非常に強力です。</p>
+                    </div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-cyan-300 mb-2">終盤：最強のイニシエーター</h3>
+                        <p>集団戦での役割はただ一つ、<span class="font-bold">「敵のキャリー（ADCやメイジ）にRを当てる」</span>こと。マルファイトのRは、試合を決定づける最強の集団戦開始スキルです。ブッシュや視界外から奇襲を仕掛け、敵の陣形を破壊しましょう。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">スキル解説と優先度</h2>
+                <div class="space-y-8 mb-8">
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/SeismicShard.png" class="skill-icon" alt="サイズミックシャードのスキルアイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">Q - サイズミックシャード</h3><p class="text-[#E0E1DD]">対象指定のハラススキル。ダメージを与え、敵のスロウと自身の移動速度増加を同時に行う。これにより、一方的にダメージを与えながら安全な距離を保つことが可能。レーン戦におけるマルファイトの生命線。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/MalphiteW.png" class="skill-icon" alt="サンダークラップのスキルアイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">W - サンダークラップ</h3><p class="text-[#E0E1DD]">自動効果で物理防御が増加し、シールドがある間はその効果が3倍になる。発動効果で次の通常攻撃が強化され、扇状に範囲ダメージを与える。物理防御を火力に変換する重要なスキル。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/Landslide.png" class="skill-icon" alt="グラウンドスラムのスキルアイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">E - グラウンドスラム</h3><p class="text-[#E0E1DD]">周囲の敵にダメージを与え、攻撃速度を低下させる。物理防御が高いほどダメージが増加する。フィオラやイレリア、トリンダメアといった通常攻撃主体のチャンピオンに対して致命的な効果を持つ。</p></div>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/spell/UFSlash.png" class="skill-icon border-cyan-400" alt="アンストッパブル・フォースのスキルアイコン">
+                        <div class="flex-1"><h3 class="text-xl font-bold text-white">R - アンストッパブル・フォース</h3><p class="text-[#E0E1DD]">対象指定不可状態で指定地点に突撃し、敵をノックアップさせるゲーム屈指の強力な集団戦開始スキル。ガンク合わせ、敵キャリーの無力化、逃走など、あらゆる状況を打開できる切り札。</p></div>
+                    </div>
+                </div>
+                <div class="text-center p-4 bg-[#1B263B]/50 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-2">スキル上げ優先度</h3>
+                    <p class="text-2xl font-bold tracking-widest">R > Q > E > W</p>
+                    <p class="mt-2">Q上げでハラス性能を最大化し、次にEを上げて物理防御と攻撃速度低下の効果を高め、最後にWを上げます。</p>
+                </div>
+            </section>
+
+            <!-- Runes and Items -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <section class="p-6 md:p-8 rounded-2xl glass-card">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">ルーン選択：彗星の追撃</h2>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png" class="rune-main" alt="秘儀の彗星">
+                        <div><h3 class="text-xl font-bold">メインパス：魔道</h3><p>Qハラスのダメージを最大化し、レーンを支配する。</p></div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">秘儀の彗星:</span> Qのスロウによりほぼ必中。ハラスダメージを底上げする。</p>
+                        <p><span class="font-bold text-cyan-300">マナフローバンド:</span> マナ問題を解決する生命線。必須ルーン。</p>
+                        <p><span class="font-bold text-cyan-300">至高:</span> スキルヘイストでQの回転率を上げる。</p>
+                        <p><span class="font-bold text-cyan-300">追火:</span> 体力が減った相手へのQがさらに痛くなる。</p>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 mb-4">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/7204_Resolve.png" class="rune-sub" alt="不滅">
+                        <div><h3 class="text-xl font-bold">サブパス：不滅</h3><p>レーンでのサステインを確保。</p></div>
+                    </div>
+                    <div class="space-y-2">
+                        <p><span class="font-bold text-cyan-300">息継ぎ:</span> ダメージを受けた際の回復力を高める。</p>
+                        <p><span class="font-bold text-cyan-300">超成長:</span> 中盤以降のタンク性能を補強する。</p>
+                    </div>
+                </section>
+                <section class="p-6 md:p-8 rounded-2xl glass-card">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">アイテムビルドパス</h2>
+                    <div class="space-y-4">
+                        <div><h3 class="text-lg font-bold mb-2">スタート</h3><div class="flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/1056.png" class="item-icon" alt="ドランリング"><p><span class="font-bold">ドランリング + 体力ポーション:</span> Qハラスの威力とマナ持ちを最大化します。</p></div></div>
+                        <div><h3 class="text-lg font-bold mb-2">コアビルド (1~3手目)</h3><ul class="space-y-3">
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3068.png" class="item-icon" alt="サンファイア・イージス"><p><span class="font-bold">サンファイア・イージス:</span> 物理防御、体力、そして継続ダメージを提供。対AD戦の基本となる最強アイテム。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3047.png" class="item-icon" alt="プレートスチールキャップ"><p><span class="font-bold">プレートスチールキャップ:</span> 対AD基本ブーツ。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3110.png" class="item-icon" alt="フローズンハート"><p><span class="font-bold">フローズンハート:</span> 大量の物理防御と、周囲の敵の攻撃速度を低下させるオーラが、通常攻撃主体の敵に絶大な効果を発揮します。</p></li>
+                        </ul></div>
+                        <div><h3 class="text-lg font-bold mb-2">4手目以降の選択肢</h3><ul class="space-y-3">
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3075.png" class="item-icon" alt="ソーンメイル"><p><span class="font-bold">ソーンメイル:</span> 敵に回復能力を持つチャンピオンが多い場合に。ブランブルベストからのアップグレード。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3143.png" class="item-icon" alt="ランデュイン・オーメン"><p><span class="font-bold">ランデュイン・オーメン:</span> 敵ADCなど、クリティカル攻撃が脅威の場合に積みます。発動効果のスロウも強力。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/6667.png" class="item-icon" alt="カオニック・ルークウォール"><p><span class="font-bold">カオニック・ルークウォール:</span> 自分がカウンターされた場合など、敵のAPダメージが脅威な場合に。</p></li>
+                            <li class="flex items-center gap-2"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/item/3151.png" class="item-icon" alt="リフトメーカー"><p><span class="font-bold">リフトメーカー:</span> APダメージを伸ばし、キャリーをワンショットしたい場合に。タンクではなくメイジとしての運用になります。</p></li>
+                        </ul></div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Countered Strategy -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card border-2 border-yellow-500/50">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center">逆境の戦略：カウンターピックされた場合</h2>
+                <p class="text-lg text-[#E0E1DD] max-w-4xl mx-auto text-center mb-6">
+                    自分が先にマルファイトをピックし、相手にモルデカイザーやサイラスといった有利なAPチャンピオンを出された場合の戦略です。目的を「レーンで勝つ」から<span class="font-bold text-yellow-300">「レーンを五分で終え、集団戦のRで勝利する」</span>に切り替えましょう。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg"><h3 class="text-xl font-bold text-cyan-300 mb-2">① 心構えを変える</h3><p>あなたの価値はRにあります。レーンでの1v1キルは狙わず、チーム全体を勝利させるための動きを意識します。</p></div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg"><h3 class="text-xl font-bold text-cyan-300 mb-2">② 立ち回りを変える</h3><p>Qはハラスではなく、主に相手が仕掛けてきた際の離脱用に使います。Rは1v1では使わず、味方のガンク合わせや他レーンへの介入のために温存します。</p></div>
+                    <div class="p-4 bg-[#1B263B]/50 rounded-lg"><h3 class="text-xl font-bold text-cyan-300 mb-2">③ ビルドを変える</h3><p>初手で<span class="font-semibold">スペクターカウル</span>から<span class="font-semibold">カオニック・ルークウォール</span>や<span class="font-semibold">自然の力</span>といった魔法防御アイテムを目指し、ダメージを軽減します。</p></div>
+                </div>
+            </section>
+
+            <!-- Matchups -->
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">マッチアップガイド：完全相性表</h2>
+                <!-- Favorable -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-green-400 border-b-2 border-green-400/50 pb-2 mb-4">有利な対面 (有利)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" class="w-12 h-12 rounded-full" alt="ダリウス"><p><span class="font-bold">vs ダリウス:</span> Qでハラスし、相手がQを使ったら懐に潜る。ブランブルベスト購入で勝利確定。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" class="w-12 h-12 rounded-full" alt="フィオラ"><p><span class="font-bold">vs フィオラ:</span> Eの攻撃速度低下が天敵。フローズンハートを積めば相手は何もできない。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Tryndamere.png" class="w-12 h-12 rounded-full" alt="トリンダメア"><p><span class="font-bold">vs トリンダメア:</span> フローズンハートとランデュイン・オーメンで完封。相手のR中は距離を取る。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Jax.png" class="w-12 h-12 rounded-full" alt="ジャックス"><p><span class="font-bold">vs ジャックス:</span> 相手のEに対してEの攻撃速度低下を合わせる。物理防御を積めばダメージは通らない。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Irelia.png" class="w-12 h-12 rounded-full" alt="イレリア"><p><span class="font-bold">vs イレリア:</span> Eの攻撃速度低下でパッシブスタックを溜めさせない。ブランブルベストも有効。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Renekton.png" class="w-12 h-12 rounded-full" alt="レネクトン"><p><span class="font-bold">vs レネクトン:</span> 序盤は厳しいが、物理防御を積めばスケールで勝る。相手のEを見てからQで反撃。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Riven.png" class="w-12 h-12 rounded-full" alt="リヴェン"><p><span class="font-bold">vs リヴェン:</span> Eの攻撃速度低下が有効。相手のコンボに合わせてEを使い、Qで距離を取る。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Aatrox.png" class="w-12 h-12 rounded-full" alt="エイトロックス"><p><span class="font-bold">vs エイトロックス:</span> Qで距離を取り、相手のQを避ける。ブランブルベストが必須。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Yasuo.png" class="w-12 h-12 rounded-full" alt="ヤスオ"><p><span class="font-bold">vs ヤスオ:</span> Eの攻撃速度低下が有効。相手の風の壁にQを吸われないように注意。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Yone.png" class="w-12 h-12 rounded-full" alt="ヨネ"><p><span class="font-bold">vs ヨネ:</span> Eの攻撃速度低下が有効。相手がEで仕掛けてきたら、こちらもEで反撃。</p></div>
+                    </div>
+                </div>
+                <!-- Even -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-yellow-400 border-b-2 border-yellow-400/50 pb-2 mb-4">五分の対面 (五分)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Garen.png" class="w-12 h-12 rounded-full" alt="ガレン"><p><span class="font-bold">vs ガレン:</span> 相手のEは物理防御を低下させるため注意。Qハラスで有利を作るが、殴り合いは避ける。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Kayle.png" class="w-12 h-12 rounded-full" alt="ケイル"><p><span class="font-bold">vs ケイル:</span> 序盤は有利。レベル6以降はQハラスで体力を削り、Rで仕掛ける。相手がRを使ったら一度下がる。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Poppy.png" class="w-12 h-12 rounded-full" alt="ポッピー"><p><span class="font-bold">vs ポッピー:</span> 相手のWでRを止められる。Qハラスで削り、Rは相手のWがない時に使う。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Ornn.png" class="w-12 h-12 rounded-full" alt="オーン"><p><span class="font-bold">vs オーン:</span> Qハラスは有効だが、相手のサステインも高い。マナ管理が重要。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" class="w-12 h-12 rounded-full" alt="セト"><p><span class="font-bold">vs セト:</span> 相手のWの確定ダメージが脅威。Qで距離を取り、殴り合いを避ける。</p></div>
+                    </div>
+                </div>
+                <!-- Unfavorable -->
+                <div>
+                    <h3 class="text-xl font-bold text-red-400 border-b-2 border-red-400/50 pb-2 mb-4">不利な対面 (不利)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Mordekaiser.png" class="w-12 h-12 rounded-full" alt="モルデカイザー"><p><span class="font-bold">vs モルデカイザー:</span> <span class="text-yellow-300">【対策】</span>チョ＝ガス推奨。初手で魔法防御アイテムを積む。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sylas.png" class="w-12 h-12 rounded-full" alt="サイラス"><p><span class="font-bold">vs サイラス:</span> <span class="text-yellow-300">【対策】</span>チョ＝ガス推奨。魔法防御を急ぎ、Rの使いどころに注意。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Gwen.png" class="w-12 h-12 rounded-full" alt="グウェン"><p><span class="font-bold">vs グウェン:</span> <span class="text-yellow-300">【対策】</span>モルデカイザー推奨。物理防御が効かないため非常に厳しい。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Vladimir.png" class="w-12 h-12 rounded-full" alt="ブラッドミア"><p><span class="font-bold">vs ブラッドミア:</span> <span class="text-yellow-300">【対策】</span>チョ＝ガス推奨。サステインで勝てず、WでRを避けられる。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Olaf.png" class="w-12 h-12 rounded-full" alt="オラフ"><p><span class="font-bold">vs オラフ:</span> <span class="text-yellow-300">【対策】</span>モルデカイザー推奨。RでCCを無効化され、確定ダメージで倒される。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Illaoi.png" class="w-12 h-12 rounded-full" alt="イラオイ"><p><span class="font-bold">vs イラオイ:</span> <span class="text-yellow-300">【対策】</span>モルデカイザー推奨。触手地獄から抜け出せず、Rを使われると厳しい。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Teemo.png" class="w-12 h-12 rounded-full" alt="ティーモ"><p><span class="font-bold">vs ティーモ:</span> <span class="text-yellow-300">【対策】</span>チョ＝ガス推奨。Qのブラインドと継続的な魔法ダメージハラスが厳しい。</p></div>
+                        <div class="p-3 bg-[#1B263B]/50 rounded-lg flex items-center gap-4"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Singed.png" class="w-12 h-12 rounded-full" alt="シンジド"><p><span class="font-bold">vs シンジド:</span> <span class="text-yellow-300">【対策】</span>チョ＝ガス推奨。追いかける展開になりやすく、マルファイトの強みを活かせない。</p></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="text-center mt-12 text-[#415A77]">
+            <p>このガイドは2025年6月下旬のパッチ状況を元に作成されています。</p>
+        </footer>
+    </div>
+</body>
+</html>
