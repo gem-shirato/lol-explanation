@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOPレーン チョ＝ガス完全攻略 (最新パッチ対応)</title>
+    <title>LoL 完全攻略ガイド (最新パッチ対応)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,22 +25,16 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        .flow-line {
-            width: 2px;
-            background-color: #415A77;
-            flex-grow: 1;
+        .lane-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .flow-arrow-down::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 8px solid #415A77;
+        .lane-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 191, 255, 0.3);
+        }
+        .disabled-lane-card {
+            filter: grayscale(80%);
+            cursor: not-allowed;
         }
     </style>
 </head>
@@ -50,202 +44,72 @@
 
         <header class="text-center mb-12 md:mb-16">
             <p class="text-lg font-bold text-[#778DA9]">最新パッチ対応</p>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-2">TOPレーン 完全攻略ガイド</h1>
-            <p class="text-xl md:text-2xl text-[#778DA9] font-bold">チョ＝ガス & マルファイトによる相互補完戦略</p>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-2">リーグ・オブ・レジェンド 完全攻略</h1>
+            <p class="text-xl md:text-2xl text-[#778DA9] font-bold">5つのレーン、無限の戦略</p>
         </header>
 
-        <main class="space-y-12">
+        <main class="space-y-16">
 
             <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center">TOPレーンとは？孤高の決闘場</h2>
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="text-center flex-shrink-0">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/map/map11.png" alt="サモナーズリフトのマップ" class="w-48 h-48 rounded-full border-4 border-[#415A77] object-cover">
-                    </div>
-                    <div class="flex-1">
-                        <p class="text-lg text-[#E0E1DD] leading-relaxed">
-                            TOPレーンは、マップの最上部に位置する長いレーンであり、多くの場合、1対1の純粋な実力勝負が繰り広げられる「孤島」です。ここで求められるのは、対面との緻密な駆け引きを制し、チームの「重り」となる屈強な存在へと成長すること。TOPレーナーは、集団戦で敵の攻撃を一手に引き受ける<span class="font-bold text-cyan-300">フロントライン</span>となったり、一人でサイドレーンを押し続ける<span class="font-bold text-cyan-300">スプリットプッシャー</span>として敵を揺さぶったりと、試合全体に大きな影響を与える重要な役割を担います。
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">TOPレーンの三大原則</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Principle 1: Wave Control -->
-                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-white mb-3">① ウェーブコントロール</h3>
-                        <p class="text-[#E0E1DD] mb-4">ミニオンの波（ウェーブ）を意図的に操作することは、TOPレーンで最も重要な技術です。これにより、ガンクの回避、有利なトレード、安全なリコール（帰還）が可能になります。</p>
-                        <ul class="space-y-2">
-                            <li><span class="font-bold text-cyan-300">フリーズ:</span> ウェーブを自軍タワー手前で固定し、安全にファームする技術。</li>
-                            <li><span class="font-bold text-cyan-300">スロープッシュ:</span> 味方ミニオンを少しずつ溜めて巨大なウェーブを作り、敵タワーに押し付ける技術。</li>
-                            <li><span class="font-bold text-cyan-300">ファストプッシュ:</span> スキルを多用して素早くウェーブを押し、リコールやローム（他レーンへの介入）の時間を作る技術。</li>
-                        </ul>
-                    </div>
-                    <!-- Principle 2: Trading -->
-                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-white mb-3">② トレードとリソース管理</h3>
-                        <p class="text-[#E0E1DD] mb-4">体力やマナという「リソース」をいかに効率良く使うかが、レーン戦の勝敗を分けます。無駄なダメージ交換は避け、有利な状況でのみ仕掛けましょう。</p>
-                        <ul class="space-y-2">
-                            <li><span class="font-bold text-cyan-300">敵ミニオンの数を意識する:</span> 敵ミニオンが多い状況で戦うと、ミニオンから大ダメージを受けます。</li>
-                            <li><span class="font-bold text-cyan-300">相手のスキルクールダウンを狙う:</span> 相手が主力スキルを使った直後は、反撃できない絶好のトレードチャンスです。</li>
-                            <li><span class="font-bold text-cyan-300">体力とマナの管理:</span> 常にリソースに余裕を持つことで、敵のガンクやオールインに対応できます。</li>
-                        </ul>
-                    </div>
-                    <!-- Principle 3: Map Awareness -->
-                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
-                        <h3 class="text-xl font-bold text-white mb-3">③ マップ認識とTP活用</h3>
-                        <p class="text-[#E0E1DD] mb-4">TOPは孤島ですが、試合は5対5です。常にミニマップを確認し、試合全体を動かす意識が重要になります。</p>
-                        <ul class="space-y-2">
-                            <li><span class="font-bold text-cyan-300">敵ジャングラーの位置を予測:</span> 敵ジャングラーがどこにいるかを常に考え、危険なタイミングで前に出ない。</li>
-                            <li><span class="font-bold text-cyan-300">テレポート(TP)の活用:</span> BOTレーンでの小規模戦やドラゴンファイトにTPで駆けつければ、試合を決定づけることができます。</li>
-                            <li><span class="font-bold text-cyan-300">ワーディング:</span> 川や敵のジャングル内にワードを置くことで、安全性が飛躍的に向上します。</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="p-6 md:p-8 rounded-2xl glass-card text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">本ガイドの戦略：なぜチョ＝ガスとマルファイトなのか？</h2>
-                <p class="text-lg text-[#E0E1DD] max-w-4xl mx-auto">
-                    上記の原則を踏まえた上で、なぜこの2体なのか？それは、彼らがTOPレーンで発生するほぼ全ての状況に対して、シンプルかつ強力な「解」を持っているからです。チョ＝ガスはスケールすることで有利な状況を盤石にし、マルファイトは不利な状況を覆すカウンター性能を持ちます。この2体をマスターすることは、TOPレーンの普遍的な知識を実践するための最短ルートなのです。
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center">サモナーズリフトへようこそ</h2>
+                <p class="text-lg text-[#E0E1DD] leading-relaxed max-w-4xl mx-auto text-center">
+                    リーグ・オブ・レジェンドの舞台、サモナーズリフトは5つの役割（レーン）に分かれて戦うチームゲームです。それぞれのレーンには独自の役割、面白さ、そして勝利への道筋が存在します。このガイドは、各レーンの基本を理解し、シンプルかつ強力なチャンピオンで勝利を掴むための、あなたの最初の相棒となるでしょう。まずは、あなたが最も心惹かれるレーンを見つけてみてください。
                 </p>
             </section>
 
             <section>
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">チャンピオン詳細ガイドへ</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Cho'Gath Link Card -->
-                    <a href="chogath.html" class="block p-8 rounded-2xl glass-card text-center overflow-hidden relative">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg" class="absolute top-0 left-0 w-full h-full object-cover opacity-10 scale-125" alt="チョ＝ガスのスプラッシュアート">
-                        <div class="relative">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Chogath.png" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-[#415A77]" alt="チョ＝ガスのイラスト">
-                            <h3 class="text-3xl font-black text-white mb-2">チョ＝ガス</h3>
-                            <p class="text-lg text-[#E0E1DD] mb-4">無限スケールの怪物</p>
-                            <p class="text-cyan-300 font-bold">詳細なビルドと立ち回りを見る →</p>
-                        </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center">各レーンの役割と魅力</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- TOP -->
+                    <a href="lanes/top.html" class="block p-6 rounded-2xl glass-card lane-card">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg" class="w-full h-40 object-cover rounded-lg mb-4" alt="TOPレーンのイメージ画像">
+                        <h3 class="text-2xl font-bold text-white">TOP (トップ)</h3>
+                        <p class="text-[#E0E1DD] mt-2">1v1の決闘場。ファイターやタンクが育ち、チームの盾や矛となる孤高のレーン。</p>
                     </a>
-                    <!-- Malphite Link Card -->
-                    <a href="malphite.html" class="block p-8 rounded-2xl glass-card text-center overflow-hidden relative">
-                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg" class="absolute top-0 left-0 w-full h-full object-cover opacity-10 scale-125" alt="マルファイトのスプラッシュアート">
-                        <div class="relative">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Malphite.png" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-[#415A77]" alt="マルファイトのイラスト">
-                            <h3 class="text-3xl font-black text-white mb-2">マルファイト</h3>
-                            <p class="text-lg text-[#E0E1DD] mb-4">物理ファイターの天敵</p>
-                            <p class="text-cyan-300 font-bold">詳細なビルドと立ち回りを見る →</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            
-            <section class="p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">対面チャンピオン タイプ別早見表</h2>
-                <p class="text-center text-[#E0E1DD] mb-8">相手がどちらのタイプか分かれば、ピック判断が容易になります。以下は一般的なTOPレーンチャンピオンの主なダメージタイプです。</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Physical Champions Column -->
-                    <div>
-                        <h3 class="text-xl font-bold text-red-400 border-b-2 border-red-400/50 pb-2 mb-4">物理チャンピオン (AD) - マルファイトが有利</h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Aatrox.png" alt="エイトロックス" class="w-8 h-8 rounded-full"><span class="font-semibold">エイトロックス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Camille.png" alt="カミール" class="w-8 h-8 rounded-full"><span class="font-semibold">カミール</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Darius.png" alt="ダリウス" class="w-8 h-8 rounded-full"><span class="font-semibold">ダリウス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Fiora.png" alt="フィオラ" class="w-8 h-8 rounded-full"><span class="font-semibold">フィオラ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Gangplank.png" alt="ガングプランク" class="w-8 h-8 rounded-full"><span class="font-semibold">ガングプランク</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Garen.png" alt="ガレン" class="w-8 h-8 rounded-full"><span class="font-semibold">ガレン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Irelia.png" alt="イレリア" class="w-8 h-8 rounded-full"><span class="font-semibold">イレリア</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Jax.png" alt="ジャックス" class="w-8 h-8 rounded-full"><span class="font-semibold">ジャックス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Jayce.png" alt="ジェイス" class="w-8 h-8 rounded-full"><span class="font-semibold">ジェイス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Kled.png" alt="クレッド" class="w-8 h-8 rounded-full"><span class="font-semibold">クレッド</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Olaf.png" alt="オラフ" class="w-8 h-8 rounded-full"><span class="font-semibold">オラフ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Pantheon.png" alt="パンテオン" class="w-8 h-8 rounded-full"><span class="font-semibold">パンテオン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Quinn.png" alt="クイン" class="w-8 h-8 rounded-full"><span class="font-semibold">クイン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Renekton.png" alt="レネクトン" class="w-8 h-8 rounded-full"><span class="font-semibold">レネクトン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Riven.png" alt="リヴェン" class="w-8 h-8 rounded-full"><span class="font-semibold">リヴェン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sett.png" alt="セト" class="w-8 h-8 rounded-full"><span class="font-semibold">セト</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Tryndamere.png" alt="トリンダメア" class="w-8 h-8 rounded-full"><span class="font-semibold">トリンダメア</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Urgot.png" alt="アーゴット" class="w-8 h-8 rounded-full"><span class="font-semibold">アーゴット</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Yasuo.png" alt="ヤスオ" class="w-8 h-8 rounded-full"><span class="font-semibold">ヤスオ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Yone.png" alt="ヨネ" class="w-8 h-8 rounded-full"><span class="font-semibold">ヨネ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Yorick.png" alt="ヨリック" class="w-8 h-8 rounded-full"><span class="font-semibold">ヨリック</span></div>
-                        </div>
+                    <!-- JUNGLE -->
+                    <div class="block p-6 rounded-2xl glass-card disabled-lane-card">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Warwick_0.jpg" class="w-full h-40 object-cover rounded-lg mb-4" alt="JUNGLEレーンのイメージ画像">
+                        <h3 class="text-2xl font-bold text-white">JUNGLE (ジャングル)</h3>
+                        <p class="text-[#E0E1DD] mt-2">マップ全体を駆け巡る司令塔。奇襲（ガンク）で試合を動かす戦略の要。<span class="text-xs text-yellow-400 block mt-2">（近日公開予定）</span></p>
                     </div>
-                    <!-- Magic & Tank Champions Column -->
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-400 border-b-2 border-blue-400/50 pb-2 mb-4">魔法チャンピオン (AP) & タンク - チョ＝ガスが有利</h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Akali.png" alt="アカリ" class="w-8 h-8 rounded-full"><span class="font-semibold">アカリ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/DrMundo.png" alt="ドクター・ムンド" class="w-8 h-8 rounded-full"><span class="font-semibold">ドクター・ムンド</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Gragas.png" alt="グラガス" class="w-8 h-8 rounded-full"><span class="font-semibold">グラガス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Gwen.png" alt="グウェン" class="w-8 h-8 rounded-full"><span class="font-semibold">グウェン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Heimerdinger.png" alt="ハイマーディンガー" class="w-8 h-8 rounded-full"><span class="font-semibold">ハイマーディンガー</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Kayle.png" alt="ケイル" class="w-8 h-8 rounded-full"><span class="font-semibold">ケイル</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Kennen.png" alt="ケネン" class="w-8 h-8 rounded-full"><span class="font-semibold">ケネン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Lillia.png" alt="リリア" class="w-8 h-8 rounded-full"><span class="font-semibold">リリア</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Maokai.png" alt="マオカイ" class="w-8 h-8 rounded-full"><span class="font-semibold">マオカイ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Mordekaiser.png" alt="モルデカイザー" class="w-8 h-8 rounded-full"><span class="font-semibold">モルデカイザー</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Nasus.png" alt="ナサス" class="w-8 h-8 rounded-full"><span class="font-semibold">ナサス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Ornn.png" alt="オーン" class="w-8 h-8 rounded-full"><span class="font-semibold">オーン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Rumble.png" alt="ランブル" class="w-8 h-8 rounded-full"><span class="font-semibold">ランブル</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Ryze.png" alt="ライズ" class="w-8 h-8 rounded-full"><span class="font-semibold">ライズ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Shen.png" alt="シェン" class="w-8 h-8 rounded-full"><span class="font-semibold">シェン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Singed.png" alt="シンジド" class="w-8 h-8 rounded-full"><span class="font-semibold">シンジド</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sion.png" alt="サイオン" class="w-8 h-8 rounded-full"><span class="font-semibold">サイオン</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Sylas.png" alt="サイラス" class="w-8 h-8 rounded-full"><span class="font-semibold">サイラス</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Teemo.png" alt="ティーモ" class="w-8 h-8 rounded-full"><span class="font-semibold">ティーモ</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Vladimir.png" alt="ブラッドミア" class="w-8 h-8 rounded-full"><span class="font-semibold">ブラッドミア</span></div>
-                            <div class="flex items-center gap-2 p-2 bg-[#0D1B2A]/50 rounded-md"><img src="https://ddragon.leagueoflegends.com/cdn/14.13.1/img/champion/Volibear.png" alt="ボリベア" class="w-8 h-8 rounded-full"><span class="font-semibold">ボリベア</span></div>
-                        </div>
+                    <!-- MID -->
+                    <div class="block p-6 rounded-2xl glass-card disabled-lane-card">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg" class="w-full h-40 object-cover rounded-lg mb-4" alt="MIDレーンのイメージ画像">
+                        <h3 class="text-2xl font-bold text-white">MID (ミッド)</h3>
+                        <p class="text-[#E0E1DD] mt-2">試合の花形。高い火力を持つメイジやアサシンが、チームのダメージ源となる。<span class="text-xs text-yellow-400 block mt-2">（近日公開予定）</span></p>
+                    </div>
+                    <!-- BOT -->
+                    <div class="block p-6 rounded-2xl glass-card disabled-lane-card lg:col-span-1.5">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg" class="w-full h-40 object-cover rounded-lg mb-4" alt="BOTレーンのイメージ画像">
+                        <h3 class="text-2xl font-bold text-white">BOT (ボット)</h3>
+                        <p class="text-[#E0E1DD] mt-2">ADCとも呼ばれる遠距離アタッカー。育ちきれば試合を破壊するチームの切り札。<span class="text-xs text-yellow-400 block mt-2">（近日公開予定）</span></p>
+                    </div>
+                    <!-- SUPPORT -->
+                    <div class="block p-6 rounded-2xl glass-card disabled-lane-card lg:col-span-1.5">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg" class="w-full h-40 object-cover rounded-lg mb-4" alt="SUPPORTレーンのイメージ画像">
+                        <h3 class="text-2xl font-bold text-white">SUPPORT (サポート)</h3>
+                        <p class="text-[#E0E1DD] mt-2">味方を守り、敵を妨害する縁の下の力持ち。視界確保や集団戦の仕掛け役も担う。<span class="text-xs text-yellow-400 block mt-2">（近日公開予定）</span></p>
                     </div>
                 </div>
             </section>
 
-            <section class="md:col-span-2 lg:col-span-3 p-6 md:p-8 rounded-2xl glass-card">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">最終戦略: 究極のピック判断フロー</h2>
-                <div class="flex flex-col items-center">
-                    <div class="bg-[#1B263B] border-2 border-[#415A77] rounded-lg px-6 py-3 text-lg font-bold">
-                        相手のTOPピックを確認
+            <section class="p-6 md:p-8 rounded-2xl glass-card">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">勝利への道：レーン戦の三大原則</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Principle 1: Wave Control -->
+                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-white mb-3">① ウェーブコントロール</h3>
+                        <p class="text-[#E0E1DD]">ミニオンの波（ウェーブ）を意図的に操作することは、レーン戦で最も重要な技術です。これにより、ガンクの回避、有利なトレード、安全なリコール（帰還）が可能になります。</p>
                     </div>
-                    <div class="w-full h-10 flex justify-center relative">
-                        <div class="flow-line h-10"></div>
-                        <div class="flow-arrow-down"></div>
+                    <!-- Principle 2: Trading -->
+                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-white mb-3">② 有利なトレード</h3>
+                        <p class="text-[#E0E1DD]">体力やマナを効率よく使ったダメージ交換。相手の主力スキルがクールダウン中のタイミングや、敵ミニオンが少ない状況を狙って仕掛けるのが基本です。</p>
                     </div>
-                    <div class="bg-[#415A77] rounded-lg px-8 py-4 text-xl font-bold text-center shadow-lg">
-                        敵は物理ファイターか？<br><span class="text-sm font-normal">(上記「AD」リスト参照)</span>
-                    </div>
-                    <div class="w-full h-10 flex justify-center">
-                        <div class="w-1/2 h-full relative border-r-2 border-[#415A77]">
-                            <div class="absolute top-0 left-0 w-full h-2 bg-[#415A77]"></div>
-                        </div>
-                        <div class="w-1/2 h-full relative">
-                            <div class="absolute top-0 right-0 w-full h-2 bg-[#415A77]"></div>
-                        </div>
-                    </div>
-                    <div class="w-full flex">
-                        <div class="w-1/2 flex flex-col items-center">
-                             <div class="w-full h-10 flex justify-center relative">
-                                <div class="flow-line h-10"></div>
-                                <div class="flow-arrow-down"></div>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-2xl font-bold text-green-400 mb-2">YES</p>
-                                <a href="malphite.html" class="block bg-green-900/50 border-2 border-green-400 rounded-lg px-8 py-4 text-2xl font-black text-white hover:bg-green-800/50 transition-colors">
-                                    マルファイトを<br>ピック
-                                </a>
-                            </div>
-                        </div>
-                        <div class="w-1/2 flex flex-col items-center">
-                             <div class="w-full h-10 flex justify-center relative">
-                                <div class="flow-line h-10"></div>
-                                <div class="flow-arrow-down"></div>
-                            </div>
-                             <div class="text-center">
-                                <p class="text-2xl font-bold text-red-400 mb-2">NO</p>
-                                <a href="chogath.html" class="block bg-red-900/50 border-2 border-red-400 rounded-lg px-8 py-4 text-2xl font-black text-white hover:bg-red-800/50 transition-colors">
-                                     チョ＝ガスを<br>ピック
-                                </a>
-                            </div>
-                        </div>
+                    <!-- Principle 3: Map Awareness -->
+                    <div class="p-6 bg-[#1B263B]/50 rounded-lg">
+                        <h3 class="text-xl font-bold text-white mb-3">③ マップ意識とチームプレイ</h3>
+                        <p class="text-[#E0E1DD]">自分のレーンだけでなく、試合全体を動かす意識が重要です。常にミニマップを確認し、チームの勝利に貢献しましょう。</p>
                     </div>
                 </div>
             </section>
